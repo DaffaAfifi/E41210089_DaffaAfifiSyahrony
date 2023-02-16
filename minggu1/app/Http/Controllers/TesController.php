@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Blog;
 
 class TesController extends Controller
 {
@@ -18,6 +19,8 @@ class TesController extends Controller
 
     public function blog()
     {
-        return view('dashboard.blog');
+        $blog = Blog::all();
+
+        return view('dashboard.blog', ['blogList' => $blog]);
     }
 }

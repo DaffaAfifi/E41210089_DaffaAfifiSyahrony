@@ -27,5 +27,15 @@
 @endsection
 
 @section('content')
-    <h1 class="text-xl mt-10 text-center">Ini blog page dek!</h1>
+    <h1 class="text-4xl text-center my-10 font-bold bg-clip-text text-transparent bg-gradient-to-r from-red-800 to-black">Daffa Shelby's Blog</h1>
+    @foreach ($blogList as $item)
+        <div class="my-10 mx-auto block max-w-7xl p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$item->title}}</h5>
+            <p class="line-clamp-2 font-normal text-gray-700 dark:text-gray-400">{{$item->content}}</p>
+            <a href="#" class="mt-4 inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-800 rounded-lg hover:bg-red-700 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                Read more
+                <svg aria-hidden="true" class="w-4 h-4 ml-2 -mr-1" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+            </a>
+        </div>
+    @endforeach
 @endsection
