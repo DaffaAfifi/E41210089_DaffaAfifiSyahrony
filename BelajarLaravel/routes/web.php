@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index']);
+Route::get('/home', [DashboardController::class, 'home']);
+
