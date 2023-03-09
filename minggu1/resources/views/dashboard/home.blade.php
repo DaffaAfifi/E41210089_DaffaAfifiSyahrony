@@ -28,4 +28,7 @@
 
 @section('content')
     <h1 class="text-xl mt-10 text-center">Ini home page dek!</h1>
+    <button class="btn btn-primary">
+        halo dek
+    </button>
 @endsection
