@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Blog;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class DetailProfile extends Model
 {
@@ -16,4 +17,9 @@ class DetailProfile extends Model
         'ttl',
         'foto'
     ];
+
+    public function blog(): HasOne
+    {
+        return $this->hasOne(Blog::class);
+    }
 }

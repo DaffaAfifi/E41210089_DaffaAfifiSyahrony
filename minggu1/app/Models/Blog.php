@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\DetailProfile;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Blog extends Model
 {
@@ -11,4 +12,9 @@ class Blog extends Model
 
     protected $table = 'blogs';
     protected $fillable = ['title', 'content'];
+
+    public function detailProfile(): BelongsTo
+    {
+        return $this->belongsTo(DetailProfile::class, 'detailprofile_id', 'id');
+    }
 }
